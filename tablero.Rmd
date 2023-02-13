@@ -6,7 +6,7 @@ output:
     theme:
       bg: "#FFFFFF"
       fg: "#2A735C" 
-      primary: "#034A94" 
+      primary: "#5aa0ad" 
       base_font:
         google: Sen
       code_font:
@@ -40,6 +40,7 @@ Theme2 = theme(
 # subsets-----------------------------------------------------------------------
 CarreraLuz22$sex[CarreraLuz22$sex == "M"]="Hombre"
 CarreraLuz22$sex[CarreraLuz22$sex == "F"]="Mujer"
+
 #-------------------------------------------------------------------------------
 CarreraLuz22M = subset(CarreraLuz22, CarreraLuz22$sex=="Hombre")
 CarreraLuz22F = subset(CarreraLuz22, CarreraLuz22$sex=="Mujer")
