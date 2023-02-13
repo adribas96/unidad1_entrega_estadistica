@@ -66,8 +66,9 @@ B = subset(CarreraLuz22$timerun/60, CarreraLuz22$sex=="Mujer")
 ```
 
 
-
-Column { data-width=50 }
+Pagina 1
+=======================================================================  
+Column { data-width=40 }
 -----------------------------------------------------------------------
 ### minimo  {.value-box}
 ```{r}
@@ -129,26 +130,12 @@ valueBox(value = paste(round(mean(B),2),"min"),
 
 
 
-Column {data-width=400}
+Column {data-width=350}
 -----------------------------------------------------------------------
 
 ### Tiempo Promedio por Categoría
 
 ```{r}
-# seleccion de bases
-
-ggplot(promedio_ciudades, aes(x = categoria, y = media, fill = categoria)) + 
-  geom_bar(stat = "identity")+
-  labs(title = "", y= "promedio", x= "categoria")+
-  scale_fill_brewer()
-  
-```
-
-### Tiempo Hombres y Mujeres por Categoría
-
-```{r}
-# seleccion de bases
-
 ggplot(CarreraLuz22, aes(x = categoria, y = timerun/60, colour = sex)) + 
   geom_boxplot(outlier.shape = NA) +
   geom_jitter()+
@@ -158,7 +145,9 @@ ggplot(CarreraLuz22, aes(x = categoria, y = timerun/60, colour = sex)) +
 
 
 
-Column {data-width=700 .tabset}
+
+
+Column {data-width=350}
 -----------------------------------------------------------------------
 
 ### Histograma de Hombres  y Mujeres
@@ -195,6 +184,12 @@ ggplot(categorias, aes(x = "", y = perc, fill = categoria)) +
 
 ```
 
+Pagina 2
+=======================================================================  
+
+Column {data-width=1000 .tabset}
+-----------------------------------------------------------------------
+
 ### Tiempos de Hombres y Mujeres
 
 ```{r}
@@ -217,6 +212,19 @@ ggplot(CarreraLuz22, aes(x = edad, y = timerun/60, color = sex)) +
 
 ```
 
+### Tiempo Hombres y Mujeres por Categoría
+
+```{r}
+
+
+ggplot(promedio_ciudades, aes(x = categoria, y = media, fill = categoria)) + 
+  geom_bar(stat = "identity")+
+  labs(title = "", y= "promedio", x= "categoria")+
+  scale_fill_brewer()
+  
+
+
+```
 
 
 
