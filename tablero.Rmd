@@ -66,7 +66,7 @@ B = subset(CarreraLuz22$timerun/60, CarreraLuz22$sex=="Mujer")
 ```
 
 
-Pagina 1
+PAGINA 1
 =======================================================================  
 Column { data-width=40 }
 -----------------------------------------------------------------------
@@ -184,7 +184,7 @@ ggplot(categorias, aes(x = "", y = perc, fill = categoria)) +
 
 ```
 
-Pagina 2
+PAGINA 2
 =======================================================================  
 
 Column {data-width=1000 .tabset}
@@ -212,7 +212,7 @@ ggplot(CarreraLuz22, aes(x = edad, y = timerun/60, color = sex)) +
 
 ```
 
-### Tiempo Hombres y Mujeres por Categoría
+### Tiempo Promedio Hombres y Mujeres por Categoría
 
 ```{r}
 
