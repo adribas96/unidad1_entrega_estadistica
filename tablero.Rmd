@@ -139,8 +139,9 @@ Column {data-width=400}
 
 ggplot(promedio_ciudades, aes(x = categoria, y = media, fill = categoria)) + 
   geom_bar(stat = "identity")+
+  labs(title = "", y= "promedio", x= "categoria")+
   scale_fill_brewer()
-
+  
 ```
 
 ### Tiempo Hombres y Mujeres por Categoría
@@ -150,7 +151,8 @@ ggplot(promedio_ciudades, aes(x = categoria, y = media, fill = categoria)) +
 
 ggplot(CarreraLuz22, aes(x = categoria, y = timerun/60, colour = sex)) + 
   geom_boxplot(outlier.shape = NA) +
-  geom_jitter()
+  geom_jitter()+
+  labs(title = "", y= "tiempo - min", x= "categoria")
 
 ```
 
@@ -193,7 +195,7 @@ ggplot(categorias, aes(x = "", y = perc, fill = categoria)) +
 
 ```
 
-### Teimpos de Hombres y Mujeres
+### Tiempos de Hombres y Mujeres
 
 ```{r}
 ggplot(CarreraLuz22, aes(x = sex, y = timerun/60 )) +
